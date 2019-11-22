@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Gigk The Bucket</title>
+    <script type="text/javascript" src="js/app.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,400i,700,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/master.css">
+  </head>
+  <body>
+
+    <header>
+
+      <section id="logo">
+        <hgroup>
+          <img src="images/gick-logo.svg" id="title" alt="Gick logo"></img>
+          <!-- <h2>Keeping track of the gigs you've been to</h2> -->
+        </hgroup>
+      </section>
+
+      <nav>
+        <ul>
+          <li>Want To See</li>
+          <li>Have Seen</li>
+          <li>Don't Want To See</li>
+        </ul>
+      </nav>
+
+    </header>
+
+    <section class="form-wrapper">
+
+      <form id="new-gig-form" action="index.html" method="post">
+      <div class="main-questions">
+        <div class="form-item">
+          <label for="act">Act:</label>
+          <input type="text" id="act">
+        </div>
+
+      <div class="form-item">
+        <label for="status">Status:</label>
+        <select id="status">
+          <option value="want">Would Like To See</option>
+          <option value="seen">Have Seen</option>
+          <option value="dont-want">Will Not See</option>
+        </select>
+        </div>
+
+        <div class="form-item">
+            <button type="submit" id="submit" name="submit">Submit</button>
+        </div>
+
+      </div>
+
+
+      <div class="hidden-questions">
+
+        <div class="form-item seen hidden">
+          <label for="venue">Venue:</label>
+          <input type="text" id="venue">
+        </div>
+
+        <div class="form-item seen hidden">
+          <label for="date">Date:</label>
+          <input type="date" id="date">
+        </div>
+
+        <div class="form-item seen hidden">
+          <label for="review">How was it?</label>
+          <input type="radio" name="review" id="review" value="1" />1
+          <input type="radio" name="review" id="review" value="2" />2
+          <input type="radio" name="review" id="review" value="3" />3
+          <input type="radio" name="review" id="review" value="4" />4
+          <input type="radio" name="review" id="review" value="5" />5
+          <div class="hidden">
+            <input type="radio" name="review" id="review" value="hidden" checked />
+          </div>
+        </div>
+
+
+        <!-- <label for="review">How Good Was it</label> -->
+        </div>
+      </form>
+
+
+
+    </section>
+
+    <section class="gig-list-container">
+      <h2 id="gick-list">Your Gick List</h2>
+      <ul id="gig-list">
+        <!-- <li class="act act-seen">
+          <h2>Abba</h2>
+          <img src="images/abba.jpg" class="gig-image" alt="bandnamepic">
+          <p>Venue</p>
+          <p>Date</p>
+        </li>
+        <li class="act act-want">
+          <h2>Phoebe Bridgers</h2>
+          <img src="images/phoe.jpg" class="gig-image" alt="bandnamepic">
+        </li>
+        <li class="act act-dont-want">
+          <h2>Act name</h2>
+          <img src="images/default.jpg" class="gig-image" alt="bandnamepic">
+        </li> -->
+      </ul>
+
+      <form id="delete-all" method="post">
+        <div class="form-item">
+            <button type="delete" name="delete">Delete All</button>
+        </div>
+      </form>
+    </section>
+
+  </body>
+</html>
