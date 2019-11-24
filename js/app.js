@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const dlt = document.querySelector('#delete-all')
   dlt.addEventListener('submit', deleteAllEntries)
+
 });
 
 const checkNewEntry = function(check) {
@@ -128,7 +129,8 @@ const deleteAllEntries = function(dlt) {
   dlt.preventDefault();
   const ul = document.querySelector('ul#gig-list');
   const gick = document.querySelector('section.gig-list-container');
-  ul.parentNode.removeChild(ul);
-  gick.appendChild(ul);
+  ul.innerHTML = '';
+  // ul.parentNode.removeChild(ul);
+  // gick.appendChild(ul);
 
 }
